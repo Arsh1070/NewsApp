@@ -30,7 +30,7 @@ const Register = () => {
         };
         setLoading(true);
         const { data } = await axios.post(
-          `http://localhost:8003/register`,
+          `/api/v1/register`,
           {
             name,
             email,

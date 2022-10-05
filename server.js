@@ -13,7 +13,7 @@ app.use(cors());
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
-app.use(userRoute);
+app.use("/api/v1", userRoute);
 app.use(notFound);
 app.use(errorHandler);
 
