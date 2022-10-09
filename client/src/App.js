@@ -57,7 +57,7 @@ function App() {
             element={<General gen={newsArray} category={category} />}
           />
         </Route>
-        <Route path="/*" element={<Page />} />
+        <Route path="*" element={<Page />} />
       </Routes>
     </>
   );
