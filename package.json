@@ -10,7 +10,7 @@
     "server": "nodemon server.js --exec babel-node --presets babel-preset-env",
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Arsh Brar",
   "license": "ISC",
