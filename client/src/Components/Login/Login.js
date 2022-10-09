@@ -23,7 +23,7 @@ const Login = ({ history }) => {
       setLoading(true);
       const data = await axios
         .post(
-          `/api/v1/login`,
+          `http://localhost:8003/api/v1/login`,
           {
             email,
             password,
