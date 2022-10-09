@@ -30,7 +30,7 @@ const Register = () => {
         };
         setLoading(true);
         const { data } = await axios.post(
-          `https://newsappbyarsh.herokuapp.com/api/v1/register`,
+          `/api/v1/register`,
           {
             name,
             email,

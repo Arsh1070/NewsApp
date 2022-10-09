@@ -23,7 +23,7 @@ const Login = ({ history }) => {
       setLoading(true);
       const data = await axios
         .post(
-          `https://newsappbyarsh.herokuapp.com/api/v1/login`,
+          `/api/v1/login`,
           {
             email,
             password,
