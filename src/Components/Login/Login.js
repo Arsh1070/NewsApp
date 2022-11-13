@@ -33,7 +33,7 @@ const Login = ({ history }) => {
         .then((res) =>
           localStorage.setItem("token", JSON.stringify(res.data.token))
         );
-      Navigate("/dashboard/general");
+      Navigate("/dashboard");
       setLoading(false);
     } catch (error) {
       setMessage(error.response.data.message);

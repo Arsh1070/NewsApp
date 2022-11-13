@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
+import General from "./General";
 import Footer from "./Footer";
 
-const DashBoard = ({ clickedCatalog }) => {
+const DashBoard = () => {
   const [category, setCategory] = useState("general");
-
-  clickedCatalog(category);
+  const setCat = (item) => {
+    setCategory(item);
+  };
 
   return (
     <>
-      <div>
-        <Navbar setCat={setCategory} />
-        <Outlet />
-        <Footer />
-      </div>
+      <Navbar setCat={setCat} />
+      <General myCategory={category} />
+      <Footer />
     </>
   );
 };
