@@ -49,20 +49,24 @@ const General = ({ myCategory }) => {
                     </a>
                   </span>
                 </p>
-                {/*     <a href={item.url} target="_blank" rel="noreferrer">
-                Continue to read...s
-              </a> */}
               </div>
             </div>
           );
         })
       ) : (
         <div className="noData">
-          <img
-            className="imgSGen"
-            src="https://img.freepik.com/premium-vector/no-data-empty-data-concept-illustration-vector_610956-1400.jpg?w=1480"
-            alt="pic"
-          />
+          <div>
+            <img
+              className="imgSGen"
+              src="https://img.freepik.com/premium-vector/no-data-empty-data-concept-illustration-vector_610956-1400.jpg?w=1480"
+              alt="pic"
+            />
+          </div>
+          <p>
+            <strong>Note:</strong> Requests from the browser are not allowed on
+            the Developer plan, except from localhost or Api request limit
+            exceeded.
+          </p>
         </div>
       )}
     </>

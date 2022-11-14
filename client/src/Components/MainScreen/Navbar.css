@@ -62,9 +62,14 @@
 }
 .noData {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 100px 0px;
+}
+.noData p {
+  color: rgb(253, 78, 93);
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 980px) {
