@@ -24,7 +24,14 @@ const General = ({ myCategory }) => {
       {newsArray?.map((item, index) => {
         return (
           <div className="contentGen" key={`nesw_${index + 1}`}>
-            <img className="imgSGen" src={item.urlToImage} alt="pic"></img>
+            <img
+              className="imgSGen"
+              src={
+                item?.urlToImage ||
+                "https://as1.ftcdn.net/v2/jpg/02/35/35/40/1000_F_235354051_yz3envzxnH9dulycguP6l4Bh3Xx0BPZ0.jpg"
+              }
+              alt="pic"
+            ></img>
             <div className="sub-headings">
               <h3 key={item.id}>{item.title}</h3>
               <a href={item?.url} className="source">
