@@ -7,7 +7,7 @@ const General = ({ myCategory }) => {
   const newsApi = async () => {
     try {
       const news = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=in&category=${myCategory}&apiKey=5a9eb011fe414b3ab2171e0bcfa50a12`
+        `https://newsapi.org/v2/top-headlines?country=in&category=${myCategory}&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setNewsArray(news.data.articles);
     } catch (error) {
