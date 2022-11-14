@@ -1,12 +1,14 @@
 {
-  "homepage": "https://arsh1070.github.io/NewsApp/",
   "name": "Newsapp",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd client && npm run build",
-    "server": "nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client"
   },
   "author": "Arsh Brar",
   "license": "ISC",
@@ -14,17 +16,19 @@
     "babel-jest": "^29.3.1",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
-    "concurrently": "^7.5.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.2",
-    "nodemon": "^2.0.14",
     "react-scripts": "5.0.1"
   },
   "engines": {
     "node": "16.17.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20"
   }
 }
