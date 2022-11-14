@@ -60,6 +60,12 @@
   font-size: 100px;
   top: 200px;
 }
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+}
 
 @media screen and (max-width: 980px) {
   .navbar {

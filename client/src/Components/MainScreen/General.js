@@ -57,13 +57,13 @@ const General = ({ myCategory }) => {
           );
         })
       ) : (
-        <>
+        <div className="noData">
           <img
             className="imgSGen"
             src="https://img.freepik.com/premium-vector/no-data-empty-data-concept-illustration-vector_610956-1400.jpg?w=1480"
             alt="pic"
           />
-        </>
+        </div>
       )}
     </>
   );
